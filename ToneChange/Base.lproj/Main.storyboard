@@ -139,7 +139,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXJ-dm-l6u">
-                                <rect key="frame" x="175" y="790" width="64" height="64"/>
+                                <rect key="frame" x="125" y="790" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="57l-t9-kLS"/>
                                     <constraint firstAttribute="height" constant="64" id="Oba-Cy-OEd"/>
@@ -149,15 +149,29 @@
                                     <action selector="stopButtonPressed:" destination="CoW-iX-tR5" eventType="touchUpInside" id="lHN-lD-hRv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wp3-HO-O5i">
+                                <rect key="frame" x="219" y="790" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="LeR-k6-SZH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playSoundForButton:" destination="CoW-iX-tR5" eventType="touchUpInside" id="K6p-vC-r3O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KiC-4O-j1z"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hXJ-dm-l6u" firstAttribute="top" secondItem="9Oz-vp-hbM" secondAttribute="bottom" constant="8" id="IBz-Jj-kQj"/>
+                            <constraint firstItem="Wp3-HO-O5i" firstAttribute="bottom" secondItem="hXJ-dm-l6u" secondAttribute="bottom" id="WVd-37-t48"/>
                             <constraint firstItem="KiC-4O-j1z" firstAttribute="trailing" secondItem="9Oz-vp-hbM" secondAttribute="trailing" id="Z1V-VG-2DU"/>
                             <constraint firstItem="KiC-4O-j1z" firstAttribute="bottom" secondItem="hXJ-dm-l6u" secondAttribute="bottom" constant="8" id="ZZs-ad-bIL"/>
+                            <constraint firstItem="Wp3-HO-O5i" firstAttribute="top" secondItem="hXJ-dm-l6u" secondAttribute="top" id="kSc-jv-FR7"/>
+                            <constraint firstItem="Wp3-HO-O5i" firstAttribute="leading" secondItem="hXJ-dm-l6u" secondAttribute="trailing" constant="30" id="lTW-A4-viu"/>
                             <constraint firstItem="9Oz-vp-hbM" firstAttribute="leading" secondItem="KiC-4O-j1z" secondAttribute="leading" id="opB-Ix-vGK"/>
-                            <constraint firstItem="hXJ-dm-l6u" firstAttribute="centerX" secondItem="VOR-lW-oeZ" secondAttribute="centerX" id="tdA-IA-qXR"/>
+                            <constraint firstItem="hXJ-dm-l6u" firstAttribute="centerX" secondItem="VOR-lW-oeZ" secondAttribute="centerX" constant="-50" id="tdA-IA-qXR"/>
                             <constraint firstItem="9Oz-vp-hbM" firstAttribute="top" secondItem="KiC-4O-j1z" secondAttribute="top" id="yCw-Us-Mwk"/>
                         </constraints>
                     </view>
@@ -165,6 +179,7 @@
                     <connections>
                         <outlet property="chipmunkButton" destination="CI2-d1-KIw" id="vyR-9P-b9s"/>
                         <outlet property="echoButton" destination="UFJ-Lc-x7J" id="3jv-Mo-d84"/>
+                        <outlet property="originalPlayButton" destination="Wp3-HO-O5i" id="fKy-38-udI"/>
                         <outlet property="rabbitButton" destination="gnN-W0-58y" id="61F-sp-gAL"/>
                         <outlet property="reverbButton" destination="lcC-Ki-Dyw" id="DbB-uk-ahk"/>
                         <outlet property="snailButton" destination="9WC-dV-TdS" id="vCD-Ka-kv5"/>
@@ -204,6 +219,7 @@
         <image name="Reverb" width="90" height="90"/>
         <image name="Slow" width="90" height="90"/>
         <image name="Stop" width="155" height="155"/>
+        <image name="play" width="170.5" height="170.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
